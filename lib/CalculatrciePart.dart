@@ -46,7 +46,7 @@ class _CalcPart extends State<CalcPart> {
       }else if(opp=="-"){
         res=(numb1-numb2).toString();
       }else if(opp=="/"){
-        res=(numb1/~numb2).toString();
+        res=(numb1/numb2).toString();
       }
     }else{
       res=res+val;
@@ -55,7 +55,7 @@ class _CalcPart extends State<CalcPart> {
       txt=res;
     }); 
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return  Container(
