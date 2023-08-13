@@ -66,7 +66,7 @@ class _CalcPart extends State<CalcPart> {
                  Padding(padding: EdgeInsets.all(15),
                     child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children:<Widget> [ Text(txt,style: TextStyle(fontSize: 30),),],
+                  children:<Widget> [ Text(txt,style:const TextStyle(fontSize: 30),),],
                 ),
                  ),
                 Expanded(child: GridView.builder(
