@@ -38,9 +38,9 @@ class MyWidget extends StatelessWidget {
                              child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                children: [
-                                  IconButton(onPressed:(){ Navigator.pop(context);}, icon: Image.asset("images/github.png")),
-                                  IconButton(onPressed: (){Navigator.pop(context);}, icon: Image.asset("images/youtube.png")),
-                                  IconButton(onPressed: (){Navigator.pop(context);}, icon: const Icon(Icons.facebook))
+                                  IconButton(onPressed:(){ Navigator.pop(context,"github");}, icon: Image.asset("images/github.png")),
+                                  IconButton(onPressed: (){Navigator.pop(context,"youtube");}, icon: Image.asset("images/youtube.png")),
+                                  IconButton(onPressed: (){Navigator.pop(context,"facebook");}, icon: const Icon(Icons.facebook))
                                ],
                              ),
                             ),

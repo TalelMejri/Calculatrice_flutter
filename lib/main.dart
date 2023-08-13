@@ -23,11 +23,28 @@ class MyApp extends StatelessWidget {
 class CalculScreen extends StatefulWidget {
   const CalculScreen({super.key});
 
+ 
   @override
   State<CalculScreen> createState() => _CalculScreen();
 }
 
 class _CalculScreen extends State<CalculScreen> {
+
+  Future<void> navigation()async{
+        String ? result=await Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=>const MyWidget()));
+       if(result!=null){
+             showDialog(context: context, builder: (BuildContext context){
+              return AlertDialog(
+                  title: Text("Warning"),
+                  content:Text("${result} Don't Work"),
+                  actions: [
+                    IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.cancel))
+                  ],
+              );
+            });
+       }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,9 +55,9 @@ class _CalculScreen extends State<CalculScreen> {
             child: Text("Calculatrice",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.white),),
          ),
          actions: <Widget>[
-           IconButton(onPressed: (){
-            Navigator.pushNamed(context,"Info");
-           }, icon: const Icon(Icons.info))
+           IconButton(onPressed: 
+             navigation
+           , icon: const Icon(Icons.info))
          ],
          ),
     );
