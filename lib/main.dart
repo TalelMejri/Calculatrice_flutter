@@ -63,23 +63,7 @@ class _CalculScreen extends State<CalculScreen> {
            , icon: const Icon(Icons.info))
          ],
          ),
-         body: 
-         Container(
-          margin: const EdgeInsets.only(top: 260),
-          child:  const Column(
-               mainAxisAlignment: MainAxisAlignment.end,
-               children: [
-                Padding(padding: EdgeInsets.all(15),
-                    child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children:<Widget> [ Text("dd"),],
-                ),
-                 ),
-                Expanded(child: CalcPart()),
-               ],
-            ),
-         )
-           
+         body: const CalcPart()
          );
        }
 }
