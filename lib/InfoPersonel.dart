@@ -17,7 +17,7 @@ class MyWidget extends StatelessWidget {
                        )
                   ]
                  ),
-        body:  Container(
+       body:  Container(
                margin: const EdgeInsets.only(top: 80),
                 child:   Center(
                   child: Column(
@@ -40,12 +40,16 @@ class MyWidget extends StatelessWidget {
                                   IconButton(onPressed: (){Navigator.pop(context);}, icon: const Icon(Icons.facebook))
                                ],
                              ),
-                            )
+                            ),
+                       ),
+                       Container(
+                        margin: const EdgeInsets.only(top: 180),
+                        child:  const Text("Calculatrice App 2023",style:TextStyle(color: Colors.black,fontSize: 15),),
                        )
                     ],
                   ),
                 ),
                )
-    );
-  }
+       );
+   }
 }
