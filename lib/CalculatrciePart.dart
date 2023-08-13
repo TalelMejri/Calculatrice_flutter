@@ -23,42 +23,39 @@ class _CalcPart extends State<CalcPart> {
   String txt="";
 
   void initAll(){
-    
+     res="0";
+     opp="";
+     numb1=0;
+     numb2=0;
+     txt=res;
   }
-  
-  String add(){
-    return "";
-  }
-   String sub(){
-    return "";
-  }
-   String multip(){
-    return "";
-  }
-   String Division(){
-    return "";
-  }
-  
+
   void CalculRes(String val){
     if(val=="C"){
-         res="0";
-         opp="";
-         numb1=0;
-         numb2=0;
+      initAll();
     }else if(val=="+" || val=="-" || val=="*" || val=="/"){
+      numb1=int.parse(txt);
       opp=val;
-      res=val;
+      res=((numb1).toString()+opp);
     }else if(val=="="){
-      res=(numb1+numb2).toString();
+      numb2 = int.parse(txt.substring(txt.lastIndexOf(opp) + 1));
+      if(opp=="+"){
+        res=(numb1+numb2).toString();
+      }else if(opp=="*"){
+        res=(numb1*numb2).toString();
+      }else if(opp=="-"){
+        res=(numb1-numb2).toString();
+      }else if(opp=="/"){
+        res=(numb1/~numb2).toString();
+      }
     }else{
-        res=res+val;
+      res=res+val;
     }
     setState(() {
-        txt=res;
-    });
+      txt=res;
+    }); 
   }
-
-
+  
   @override
   Widget build(BuildContext context) {
     return  Container(
