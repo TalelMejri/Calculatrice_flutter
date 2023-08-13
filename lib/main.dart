@@ -1,3 +1,4 @@
+import 'package:calculatrice/CalculatrciePart.dart';
 import 'package:flutter/material.dart';
 import 'InfoPersonel.dart';
 void main(){
@@ -60,6 +61,7 @@ class _CalculScreen extends State<CalculScreen> {
            , icon: const Icon(Icons.info))
          ],
          ),
+         body: const CalcPart(),
     );
   }
 }
