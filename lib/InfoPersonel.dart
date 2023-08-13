@@ -1,8 +1,11 @@
 import 'package:calculatrice/main.dart';
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +38,8 @@ class MyWidget extends StatelessWidget {
                              child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                children: [
-                                  IconButton(onPressed: (){Navigator.pop(context);}, icon: Image.asset("images/github.png")),
-                                  IconButton(onPressed: (){Navigator.pop(context);}, icon:Image.asset("images/youtube.png")),
+                                  IconButton(onPressed:(){ Navigator.pop(context);}, icon: Image.asset("images/github.png")),
+                                  IconButton(onPressed: (){Navigator.pop(context);}, icon: Image.asset("images/youtube.png")),
                                   IconButton(onPressed: (){Navigator.pop(context);}, icon: const Icon(Icons.facebook))
                                ],
                              ),
